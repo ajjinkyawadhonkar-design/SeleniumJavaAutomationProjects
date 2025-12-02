@@ -17,7 +17,7 @@ public class TC_RS_001 {
 	public void FillRequiredRegistraionInfo() {
 		
 		WebDriver driver =new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.manage().window().maximize();
 		driver.get("https://tutorialsninja.com/demo/");
 		
@@ -80,6 +80,6 @@ public class TC_RS_001 {
 		
 
 		
-	}
+	}//THANK_YOU!
 
 }
