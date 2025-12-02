@@ -9,10 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_RF_005 {
 
-	@Test
-	public void FillRequiredRegistraionInfo() {
+public class TC_RF_006 {
+
+ @Test
+	public void NewsletterNotSubscribe() {
 		
 		WebDriver driver =new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
@@ -31,8 +32,8 @@ public class TC_RF_005 {
 		driver.findElement(By.id("input-telephone")).sendKeys("89990299166");		
 		driver.findElement(By.id("input-password")).sendKeys("11224455");		
 		driver.findElement(By.id("input-confirm")).sendKeys("11224455");
-		//Select Newsletter radio Subscribtion by clicking
-		driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset[3]/div/div/label[1]/input")).click();
+		//Select NO Newsletter radio Subscribtion by clicking
+		driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset[3]/div/div/label[2]/input")).click();
 		
 		
 		driver.findElement(By.name("agree")).click();
@@ -60,8 +61,8 @@ public class TC_RF_005 {
 	    
 	    driver.findElement(By.xpath("//*[@id=\"content\"]/ul[4]/li/a")).click();
 	    
-	    Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div/div/label[1]/input")).isDisplayed());
-	    Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div/div/label[1]/input")).isSelected());
+	    Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div/div/label[2]/input")).isDisplayed());
+	    Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div/div/label[2]/input")).isSelected());
 	    
 	    driver.quit();
 	    
@@ -78,4 +79,4 @@ public static String generateNewEmail() {
 		
 	}}
 
-////*[@id="content"]/form/fieldset[3]/div/div/label[2]/input
+
